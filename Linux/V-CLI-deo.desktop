@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=V-CLI-deo
+Comment=Zum herunterladen von Videos auf YouTube und anderen Plattformen
+Exec=bash /Pfad/zu/V-CLI-deo.sh
+Icon=/Pfad/zum/Icon.png
+Terminal=true
+Type=Application
+Categories=Network;
