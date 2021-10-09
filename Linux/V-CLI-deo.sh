@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ---------------------------------------------------
-echo V-CLI-deo v.1.1 20211009 by Monstanner
+echo V-CLI-deo v.1.0 20211009 by Monstanner
 echo ---------------------------------------------------
 
 cd #Hier bitte den Pfad eingeben, wo das Video gespeichert werden soll.
