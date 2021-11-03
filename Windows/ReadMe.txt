@@ -12,6 +12,6 @@ Dann könnt Ihr den Pfad mit einem Mal durch euren Pfad ersetzen "C:/Users/Test/
 
 Ihr braucht neben youtube-dl noch libav, um Videos in MP4 zu konvertieren.
 
-Dazu ladet ihr Euch hier (http://builds.libav.org/windows/release-gpl/) libav-11.3-win32.7z für 32-Bit Systeme oder libav-11.3-win64.7z für 64-Bit Systeme herunter.
+Dazu ladet Ihr Euch hier (http://builds.libav.org/windows/release-gpl/) libav-11.3-win32.7z für 32-Bit Systeme oder libav-11.3-win64.7z für 64-Bit Systeme herunter.
 Dies gemacht, entpackt Ihr alles was in dem 7zip-Archiv ist in einen Ordner in welchen sich auch youtube-dl.exe befindet.
 Im selben Ordner packt Ihr noch die V-CLI-deo.bat. Von dieser könnt Ihr dann eine Verknüpfung auf dem Desktop anlegen und YouTube-DL für Videos (MP4) nutzen.
