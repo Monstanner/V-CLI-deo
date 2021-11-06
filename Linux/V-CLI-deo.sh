@@ -13,7 +13,7 @@ echo ---------------------------------------------------
 echo V-CLI-deo v.1.1 20211106 by Monstanner
 echo ---------------------------------------------------
 
-DOWNDIR=$HOME/Musik/Heruntergeladen/
+DOWNDIR=$HOME/Video/Heruntergeladen/
 mkdir $DOWNDIR 2> /dev/null
 
 #!/bin/bash
