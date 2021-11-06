@@ -1,10 +1,20 @@
 #!/bin/bash
 
+if which youtube-dl >/dev/null;
+then echo "youtube-dl ist installiert." &>/dev/null
+else echo "youtube-dl ist nicht installiert. Um V-CLI-deo verwenden zu können, muss youtube-dl installiert werden." && xterm -e "sudo zypper ln  -l -y youtube-dl"
+fi
+
+#!/bin/bash
+
 echo ---------------------------------------------------
-echo V-CLI-deo v.1.0 20211009 by Monstanner
+echo Hinweis! Aktuell hat youtube-dl Probleme mit der Herunterladegeschwindigkeit von Videos. Das ist kein Fehler von V-CLI-deo.
+echo ---------------------------------------------------
+echo V-CLI-deo v.1.1 20211106 by Monstanner
 echo ---------------------------------------------------
 
-cd #Hier bitte den Pfad eingeben, wo das Video gespeichert werden soll.
+DOWNDIR=$HOME/Musik/Heruntergeladen/
+mkdir $DOWNDIR 2> /dev/null
 
 #!/bin/bash
 
@@ -20,7 +30,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 160+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 160+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -32,7 +42,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 133+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 133+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -44,7 +54,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 134+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 134+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -56,7 +66,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 135+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 135+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -68,7 +78,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 136+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 136+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -80,7 +90,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 136+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 136+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -92,7 +102,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 137+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 137+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -104,7 +114,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 299+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 299+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -116,7 +126,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 400+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 400+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -128,7 +138,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 400+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 400+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -140,7 +150,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 401+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 401+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -152,7 +162,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f 401+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f 401+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -164,7 +174,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -f bestvideo+bestaudio --merge-output-format mp4 -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -f bestvideo+bestaudio --merge-output-format mp4 -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -176,7 +186,7 @@ do
               while read INPUT
               do
                 echo Wird heruntergeladen...
-                youtube-dl -o "%(title)s.%(ext)s" "$INPUT"
+                youtube-dl -o "$DOWNDIR%(title)s.%(ext)s" "$INPUT"
                 break
               done
               exit
@@ -185,7 +195,7 @@ do
               echo ---------------------------------------------------
               echo V-CLI-deo ist ein Terminal Skript und wurde von Monstanner erstellt.
               echo V-CLI-deo gibt es für GNU/Linux und Windows.
-              echo Aktuelle Version: 1.0 20211009
+              echo Aktuelle Version: 1.1 20211106 by Monstanner
               echo Link zu V-CLI-deo: www.github.com/Monstanner/V-CLI-deo
               echo Fork von YouTube-Dl MP4 v.1.3.1 20210919
               echo ---------------------------------------------------
